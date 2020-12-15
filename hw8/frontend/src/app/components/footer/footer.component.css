@@ -1,0 +1,10 @@
+.footer {
+  width: 100%;
+  background-color: rgb(219, 219, 219);
+  color: black;
+  text-align: center;
+  line-height: 3rem;
+  height: 3rem;
+  opacity: 1;
+  z-index: 9999;
+}

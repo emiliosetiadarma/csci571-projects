@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">
+            @color/launcher_gray
+        </item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,130 @@
+<div class="container">
+  <!-- Spinner -->
+  <div
+    class="row justify-content-center"
+    *ngIf="isLoading"
+    style="margin-top: 40px"
+  >
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <!-- Invalid Ticker -->
+  <div *ngIf="!isLoading && !validTicker">
+    <app-invalid></app-invalid>
+  </div>
+  <!-- Content -->
+  <div *ngIf="!isLoading && validTicker">
+    <ngb-alert
+      *ngIf="successMessageBuy"
+      type="success"
+      (close)="successMessageBuy = ''"
+      class="mt-3 mb-3 text-center"
+      >{{ successMessageBuy }}</ngb-alert
+    >
+    <ngb-alert
+      *ngIf="successMessageWatchlist"
+      [type]="inWatchlist ? 'success' : 'danger'"
+      (close)="successMessageWatchlist = ''"
+      class="mt-3 mb-3 text-center"
+      >{{ successMessageWatchlist }}</ngb-alert
+    >
+    <!-- Heading -->
+    <div class="row justify-content-center" id="heading">
+      <div class="col-6">
+        <h1 class="text-left" style="margin-bottom: 0px">
+          {{ descriptionData.ticker }}
+          <span (click)="toggleWatchlist()">
+            <app-watchlist-star [fill]="inWatchlist"></app-watchlist-star>
+          </span>
+        </h1>
+        <h3 class="text-left text-secondary" style="margin-top: 0px">
+          {{ descriptionData.name }}
+        </h3>
+      </div>
+      <div class="col-6">
+        <span [ngClass]="{ green: change > 0, red: change < 0 }">
+          <h1 class="text-right" style="margin-bottom: 0px">
+            {{ buyPrice.toFixed(2) }}
+          </h1>
+          <h3 class="text-right" style="margin-top: 0px">
+            <app-change-arrow [change]="change"></app-change-arrow>
+            {{ changeString }} ({{ changePercentString }}%)
+          </h3>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-left">{{ descriptionData.exchangeCode }}</p>
+      </div>
+      <div class="col-6">
+        <p class="text-right sub">{{ timestamp }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-buy-button
+          [color]="'green'"
+          [ticker]="ticker"
+          [price]="buyPrice"
+          (close)="toggleBuyAlert($event)"
+        ></app-buy-button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <p class="text-success text-center" *ngIf="isMarketOpen">
+          <span id="market-open-text"> Market is Open </span>
+        </p>
+        <p class="text-danger text-center" *ngIf="!isMarketOpen">
+          <span id="market-closed-text">
+            Market Closed on {{ latestPriceTimestamp }}
+          </span>
+        </p>
+      </div>
+    </div>
+    <!-- Tabs -->
+    <div class="row justify-content-center">
+      <div class="col">
+        <mat-tab-group mat-stretch-tabs animationDuration="0ms">
+          <mat-tab label="Summary">
+            <div class="mt-4 container">
+              <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                  <app-price-table
+                    [latestPriceData]="latestPriceData"
+                    [isOpen]="isMarketOpen"
+                  ></app-price-table>
+                  <p class="text-center"><b>Company's Description</b></p>
+                  <p class="text-left">
+                    Start Date: {{ descriptionData.startDate }}
+                  </p>
+                  <p class="text-left">{{ descriptionData.description }}</p>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                  <app-daily-chart
+                    [prices]="dailyPrices"
+                    [ticker]="ticker"
+                    [change]="change"
+                  ></app-daily-chart>
+                </div>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Top News"
+            ><div class="container">
+              <app-news-group [newsData]="news"></app-news-group></div
+          ></mat-tab>
+          <mat-tab label="Charts"
+            ><ng-template matTabContent
+              ><div class="mt-4 container">
+                <app-historical-chart
+                  [data]="historicalChartData"
+                  [ticker]="ticker"
+                ></app-historical-chart>
+              </div> </ng-template
+          ></mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://node-stocksearch-backend-es-v5.wl.r.appspot.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:id="@+id/itemDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/background_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/itemDividerBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/background_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStockTicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_black"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TICKER" />
+
+    <TextView
+        android:id="@+id/tvStockName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:background="#00000000"
+        android:paddingLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStockTicker"
+        tools:text="Stock Description" />
+
+    <TextView
+        android:id="@+id/tvStockPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_black"
+        android:paddingRight="36dp"
+        android:background="#00000000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/itemDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Stock Price" />
+
+    <TextView
+        android:id="@+id/tvStockChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        android:fontFamily="@font/roboto_black"
+        android:paddingRight="36dp"
+        android:background="#00000000"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStockPrice"
+        tools:text="Stock Change" />
+
+    <ImageButton
+        android:id="@+id/detailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="#00000000"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStockChange"
+        app:layout_constraintEnd_toStartOf="@+id/tvStockChange"
+        app:layout_constraintTop_toBottomOf="@+id/tvStockPrice"
+        android:background="@color/transparent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

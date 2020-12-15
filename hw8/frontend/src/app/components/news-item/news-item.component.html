@@ -1,0 +1,14 @@
+<div
+  class="card card-body text-dark h-100 justify-content-center"
+  (click)="openNewsModal()"
+  style="cursor: pointer"
+>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-lg-5">
+      <img [src]="news.urlToImage" alt="news image" class="img-fluid" />
+    </div>
+    <div class="col-sm-12 col-lg-7" id="description">
+      <p class="mb-0" [innerHtml]="news.title"></p>
+    </div>
+  </div>
+</div>

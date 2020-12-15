@@ -1,0 +1,185 @@
+body {
+  background-color: rgb(95, 97, 164);
+  overflow-x: hidden;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 900px;
+}
+
+.required {
+  color: red;
+}
+
+/*
+  Search Box Header
+*/
+input {
+  outline: none;
+}
+
+input:focus {
+  background-color: white;
+  border: 2px solid black;
+  outline: none;
+}
+
+input#ticker {
+  text-align: left;
+  outline: none;
+}
+
+.search-container {
+  background-color: rgb(232, 232, 232);
+  height: 300px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 17px;
+}
+
+.search-container * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.search-header {
+  padding-top: 63px;
+}
+
+.search-label {
+  font-family: sans-serif;
+}
+
+.search-header {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.search-button {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-left: 27px;
+  margin-right: 27px;
+  height: 30px;
+  width: 90px;
+}
+
+.search-button:hover {
+  background-color: gray;
+  border: 2px solid black;
+}
+
+hr {
+  border-bottom: 2px solid white;
+  border-color: white;
+  margin-bottom: 20px;
+}
+
+/*
+  Content
+*/
+#horizontal-navbar {
+  overflow: hidden;
+  background-color: rgb(232, 232, 232);
+  margin-bottom: 30px;
+}
+
+#horizontal-navbar button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+#horizontal-navbar button:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+#horizontal-navbar button.active {
+  background-color: rgb(204, 204, 204);
+}
+
+#tab-content.stock-summary {
+  display: none;
+}
+
+/*
+  Dashboard
+*/
+
+table {
+  border-collapse: collapse;
+  background-color: rgb(251, 251, 251);
+  border: 1px solid rgb(209, 209, 209);
+  line-height: 15px;
+  table-layout: fixed;
+}
+
+.table-category {
+  background-color: rgb(231, 231, 231);
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 1px solid rgb(209, 209, 209);
+  padding-left: 6px;
+  line-height: 15px;
+  width: 40%;
+}
+
+.table-content {
+  text-align: center;
+  font-family: sans-serif;
+  border: 1px solid rgb(209, 209, 209);
+  max-height: 73px;
+}
+
+.clamp-to-five {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  border: none;
+}
+
+.change-arrow {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+}
+
+.news-container {
+  background-color: rgb(232, 232, 232);
+  width: 900px;
+  height: 130px;
+  border: none;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-radius: 2px;
+}
+
+.news-image {
+  width: 100px;
+  height: 105px;
+  padding: 10px;
+}
+
+.news-content {
+  text-align: left;
+  font-family: sans-serif;
+  vertical-align: text-top;
+  padding-top: 13px;
+}
+
+.error {
+  text-align: center;
+  font-family: sans-serif;
+}

@@ -1,0 +1,36 @@
+<div class="row mt-4 mb-4" id="item" (click)="onClick()">
+  <div class="col-12 card">
+    <div class="card-body w-100" style="position: relative">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h2 class="text-left">
+            {{ priceData.ticker }}
+          </h2>
+          <h5 class="text-left">
+            {{ name }}
+          </h5>
+        </div>
+        <div class="col-6">
+          <span [ngClass]="{ green: change > 0, red: change < 0 }">
+            <h2 class="text-right">
+              {{ priceData.last.toFixed(2) }}
+            </h2>
+            <h5 class="text-right">
+              <app-change-arrow [change]="change"></app-change-arrow>
+              {{ changeString }} ({{ changePercentString }}%)
+            </h5>
+          </span>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="close"
+        id="close-button"
+        aria-label="Close"
+        (click)="onClose()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+</div>

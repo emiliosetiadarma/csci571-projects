@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="/static/css/u9Dbg3hkUo.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <title>Stock Search</title>
+  </head>
+
+  <body>
+    <div class="search-container">
+      <h1 class="search-header">Stock Search</h1>
+      <form id="search-form">
+        <label class="search-label" for="ticker"
+          >Enter Stock Ticker Symbol<span class="required">*</span></label
+        >
+        <input type="text" id="ticker" name="ticker" required />
+        <br />
+        <input type="submit" id="submit" value="Submit" class="search-button" />
+        <input type="reset" id="reset" value="Clear" class="search-button" />
+      </form>
+    </div>
+    <hr />
+    <div id="dashboard">
+      <div id="horizontal-navbar"></div>
+      <div id="content"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/static/js/misc.js"></script>
+  <script type="text/javascript" src="/static/js/error.js"></script>
+  <script type="text/javascript" src="/static/js/tabs.js"></script>
+  <script type="text/javascript" src="/static/js/navBar.js"></script>
+  <script type="text/javascript" src="/static/js/companyOutlook.js"></script>
+  <script type="text/javascript" src="/static/js/stockSummary.js"></script>
+  <script type="text/javascript" src="/static/js/charts.js"></script>
+  <script type="text/javascript" src="/static/js/news.js"></script>
+  <script type="text/javascript" src="/static/js/index.js"></script>
+</html>

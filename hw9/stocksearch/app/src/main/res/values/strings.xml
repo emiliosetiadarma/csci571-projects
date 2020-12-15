@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Stocks</string>
+    <string-array name="sample_stock_tickers">
+        <item>CLDR</item>
+        <item>MSFT</item>
+        <item>NVDA</item>
+        <item>AAPL</item>
+        <item>AMD</item>
+        <item>TSLA</item>
+    </string-array>
+    <string-array name="sample_stock_names">
+        <item>Cloudera</item>
+        <item>Microsoft</item>
+        <item>Nvidia</item>
+        <item>Apple</item>
+        <item>Advanced Micro Devices</item>
+        <item>Tesla</item>
+    </string-array>
+    <string-array name="sample_stock_combo">
+        <item>CLDR.,.Cloudera Inc</item>
+        <item>MSFT.,.Microsoft Corporation</item>
+        <item>NVDA.,.NVIDIA Corp</item>
+        <item>AAPL.,.Apple Inc</item>
+        <item>AMD.,.Advanced Micro Devices Inc</item>
+        <item>TSLA.,.Tesla Inc</item>
+    </string-array>
+<!--    Give ticker after url-->
+    <string name="autocompleteUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/search/</string>
+<!--    Give ticker after url-->
+    <string name="descriptionUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/stock/description/</string>
+<!--    Give ticker after url-->
+    <string name="latestPriceUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/stock/latestprice/</string>
+<!--    Give ticker after url. Give number of months after ticker-->
+    <string name="historicalDataUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/stock/historicaldata/</string>
+<!--    Give ticker after url. Give YYYY-MM-DD after ticker-->
+    <string name="dailydataUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/stock/chartdata/</string>
+<!--    Give ticker after url-->
+    <string name="newsUrl">https://node-stocksearch-backend-es-v6.wl.r.appspot.com/android/stock/news/</string>
+    <string name="detailsViewTitle">Stocks</string>
+    <string name="superLongText">Sed a urna et purus finibus laoreet. Donec tempus pharetra ipsum, et porttitor velit tempor at. Sed viverra nisl ligula, vel congue libero pretium nec. Suspendisse potenti. In erat urna, pellentesque sed malesuada et, sodales eu tellus. Cras scelerisque risus sit amet ligula tempor, vel euismod nunc consequat. Vivamus justo leo, lacinia vitae odio eget, semper bibendum nibh. Sed gravida feugiat bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas auctor elementum metus, sed volutpat purus maximus vitae. Duis finibus lacinia posuere. Maecenas sed consectetur ligula, tincidunt consequat ipsum. Ut et massa sit amet justo ullamcorper scelerisque vel nec sapien. In hac habitasse platea dictumst. Sed condimentum turpis eros, at ultricies dui condimentum at. Fusce tincidunt, ante eget imperdiet varius, nisi ex mollis lorem, rhoncus sollicitudin lectus arcu vel arcu. Integer porta sollicitudin condimentum. Sed augue magna, finibus ac metus et, sagittis auctor neque. Praesent scelerisque auctor turpis, vel aliquam est rutrum eget. Etiam mollis libero et blandit pretium.</string>
+
+</resources>

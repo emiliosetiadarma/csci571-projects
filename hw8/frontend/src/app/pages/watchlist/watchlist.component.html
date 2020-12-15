@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-5 mb-2">
+    <div class="col-12">
+      <h1 class="textLeft">My Watchlist</h1>
+    </div>
+  </div>
+  <!-- Spinner -->
+  <div
+    class="row justify-content-center"
+    *ngIf="isLoading"
+    style="margin-top: 40px"
+  >
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <div *ngIf="!isLoading && this.tickers.length === 0">
+    <app-empty-watchlist-alert></app-empty-watchlist-alert>
+  </div>
+  <div *ngIf="!isLoading && this.tickers.length !== 0">
+    <div class="ml-2 mr-2" *ngFor="let priceData of prices">
+      <app-watchlist-item
+        [priceData]="priceData"
+        [name]="names[priceData.ticker]"
+        (close)="onRemove($event)"
+      ></app-watchlist-item>
+    </div>
+  </div>
+</div>

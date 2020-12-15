@@ -1,0 +1,17 @@
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+#close-button {
+  position: absolute;
+  top: 2px;
+  right: -10px;
+}
+
+#item {
+  cursor: pointer;
+}

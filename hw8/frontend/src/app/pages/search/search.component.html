@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <h1 id="title">STOCK SEARCH</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <form
+      id="search-form"
+      class="input-group rounded-pill"
+      [formGroup]="searchForm"
+      (ngSubmit)="onSubmit(searchForm.value)"
+    >
+      <div class="input-group border rounded-pill">
+        <input
+          type="text"
+          placeholder="Enter stock name"
+          class="form-control border-0 ml-2 bg-transparent"
+          [matAutocomplete]="ticker"
+          formControlName="searchInput"
+        />
+        <div class="input-group-append border-0">
+          <button type="submit" class="btn mr-2">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <mat-autocomplete #ticker="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngIf="isLoading"
+          ><mat-spinner diameter="25"></mat-spinner
+        ></mat-option>
+        <mat-option
+          *ngFor="let option of options"
+          [value]="option"
+          class="option"
+        >
+          <b>{{ option.ticker }}</b> | {{ option.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+  </div>
+</div>

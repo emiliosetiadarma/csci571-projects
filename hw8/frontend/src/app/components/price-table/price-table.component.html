@@ -1,0 +1,80 @@
+<div class="container ml-auto mr-auto">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-3"><p>High Price:</p></div>
+    <div class="col-3">
+      <p>
+        {{ latestPriceData.high.toFixed(2) }}
+      </p>
+    </div>
+    <div class="col-3"><p *ngIf="isOpen">Mid Price:</p></div>
+    <div class="col-3">
+      <p *ngIf="isOpen">
+        {{ latestPriceData.mid != null ? latestPriceData.mid.toFixed(2) : "-" }}
+      </p>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-3"><p>Low Price:</p></div>
+    <div class="col-3">
+      <p>
+        {{ latestPriceData.low.toFixed(2) }}
+      </p>
+    </div>
+    <div class="col-3"><p *ngIf="isOpen">Ask Price:</p></div>
+    <div class="col-3">
+      <p *ngIf="isOpen">
+        {{
+          latestPriceData.askPrice != null
+            ? latestPriceData.askPrice.toFixed(2)
+            : "-"
+        }}
+      </p>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-3"><p>Open Price:</p></div>
+    <div class="col-3">
+      <p>
+        {{ latestPriceData.open.toFixed(2) }}
+      </p>
+    </div>
+    <div class="col-3"><p *ngIf="isOpen">Ask Size:</p></div>
+    <div class="col-3">
+      <p *ngIf="isOpen">
+        {{ latestPriceData.askSize != null ? latestPriceData.askSize : "-" }}
+      </p>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-3"><p>Prev. Close:</p></div>
+    <div class="col-3">
+      <p>
+        {{ latestPriceData.prevClose.toFixed(2) }}
+      </p>
+    </div>
+    <div class="col-3"><p *ngIf="isOpen">Bid Price:</p></div>
+    <div class="col-3">
+      <p *ngIf="isOpen">
+        {{
+          latestPriceData.bidPrice != null
+            ? latestPriceData.bidPrice.toFixed(2)
+            : "-"
+        }}
+      </p>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-3"><p>Volume:</p></div>
+    <div class="col-3">
+      <p>
+        {{ latestPriceData.volume }}
+      </p>
+    </div>
+    <div class="col-3"><p *ngIf="isOpen">Bid Size:</p></div>
+    <div class="col-3">
+      <p *ngIf="isOpen">
+        {{ latestPriceData.bidSize != null ? latestPriceData.bidSize : "-" }}
+      </p>
+    </div>
+  </div>
+</div>

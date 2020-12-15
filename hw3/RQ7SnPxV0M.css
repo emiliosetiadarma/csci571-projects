@@ -1,0 +1,127 @@
+body {
+  padding-left: 50px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Colors */
+.blue {
+  color: #0739c1;
+}
+
+.gray {
+  color: #747474;
+}
+
+.black {
+  color: black;
+}
+
+.light-blue {
+  color: #a5e0e8;
+}
+
+/* More element specific */
+.text {
+  color: #0739c1;
+  font-family: 'Lora', serif;
+}
+
+.title {
+  text-align: left;
+}
+
+.title-text {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.title-break {
+  margin: 0 -100px;
+  border-bottom: none;
+  border-color: rgba(116, 116, 116, 0.5);
+}
+
+.navigation-bar {
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+
+.navigation-bar .navigation-text {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+.parallax {
+  background-image: url('https://csci571.com/hw/hw3/images/Cutlery.png');
+  width: 1143px;
+  height: 700px;
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.banner {
+  padding-top: 2px;
+  padding-left: 50px;
+  width: 400px;
+}
+
+.banner-text {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  font-size: 58px;
+}
+
+.banner-button-container {
+  background-color: white;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.banner-button-text {
+  font-size: 18px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+}
+
+.table {
+  width: 1225px;
+}
+
+.table-header {
+  font-size: 33px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 50px;
+  padding-right: 40px;
+}
+
+.table-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  height: 100px;
+  padding-bottom: 35px;
+  padding-right: 40px;
+}
+
+.table-image-container {
+  background-color: #a5e0e8;
+  margin-right: 30px;
+}
+
+.table-image {
+  padding-right: 25px;
+  display: block;
+  width: 552px;
+  height: 470px;
+}
